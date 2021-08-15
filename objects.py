@@ -6,14 +6,30 @@ import sys
 class GameRound:
     """Round handler class"""
     def __init__(self):
-        # TODO: gamescreen initial method
-        #  screen size, colors, frames controller,
-        #  scores
-        pass
+        # windows setup
+        self.screen_width = 720
+        self.screen_height = 460
 
-    def chek_errors(self):
-        # TODO: error handling for pygame initialization
-        pass
+        # needed colors
+        self.red = pygame.Color(255, 57, 57)
+        self.green = pygame.Color(39, 174, 29)
+        self.black = pygame.Color(0, 0, 0)
+        self.white = pygame.Color(255, 255, 255)
+        self.brown = pygame.Color(105, 78, 37)
+
+        # set the number of frames per second
+        self.fps = pygame.time.Clock()
+
+        # score variable (the amount of food eaten)
+        self.score = 0
+
+    @staticmethod
+    def chek_errors():
+        check_errors = pygame.init()
+        if check_errors[1] > 0:
+            sys.exit()
+        else:
+            print('Ok')
 
     def set_window_properties(self):
         # TODO: Set the surface (the surface of which
