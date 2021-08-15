@@ -43,6 +43,10 @@ class Snake:
         #  position and direction of movement.
         pass
 
+    def draw_snake(self):
+        # TODO: the snake should be drawn in a separate method
+        pass
+
     def validate_direction_and_change(self):
         # TODO: Change the direction of movement of the snake only if
         #  it isn't directly opposite to the current one
